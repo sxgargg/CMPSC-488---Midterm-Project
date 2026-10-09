@@ -1,0 +1,40 @@
+{
+  "snapshot_utc": "2026-10-09T23:43:45.612419+00:00",
+  "datasets": {
+    "ollama_outputs_llama3.1_8b.json": {
+      "records": 500,
+      "complete": true,
+      "families": [
+        "llama"
+      ],
+      "last_response_utc": "2026-09-23T05:19:58.712735+00:00"
+    },
+    "gemini_outputs_gemini_3.8_flash.jsonl": {
+      "records": 500,
+      "complete": true,
+      "families": [
+        "gemini"
+      ],
+      "last_response_utc": "2026-10-09T23:10:27.702954+00:00"
+    },
+    "ollama_outputs_qwen2.5_7b.json": {
+      "records": 316,
+      "complete": false,
+      "families": [
+        "qwen"
+      ],
+      "last_response_utc": "2026-10-09T23:43:37.469311+00:00"
+    }
+  },
+  "sha256": {
+    "llm_classification_prompts_500.json": "f37a3e9ec092f8314f2af493a11a85457e44e6ac3b21eb90333a3495b4054cd7",
+    "ollama_outputs_llama3.1_8b.json": "a4473e15d33220f4dc3398925681c9a5d8e2deb16fecdb8e279c97a3e12dedd1",
+    "gemini_outputs_gemini_3.8_flash.jsonl": "821d7abdd5911639e287c159c43a7332b1ba557695dfd06c0e1ab74db905b98e",
+    "ollama_outputs_qwen2.5_7b.json": "20f988cf67c4b02fdcbef3698a54f7e35d25e24f74ce95d56cdddf32490976ab",
+    "collect_llm_outputs.py": "3844d758d91000a04e97536cce146bf6ea26d228241911a75e2301ea8a1537fc",
+    "collect_ollama_remote.py": "f9318706b470c3f146b92f0bef766989d1d8142031b22ddb5edd0a608c3e3427",
+    "collect_qwen_concurrent.py": "9291450f328ce231ac513deffcf19e72d378e7068b82489fb7fdd240b5c91216",
+    "train_authorship_attribution.py": "2e903a3364cbc96fa20d920e155b26806409d2183f8f0bd96fb971774b9b3794",
+    "qwen_collection_events.jsonl": "891b4b1de02377b7e021b344d9c5125d297adb73b645431427b28b69bea2db65"
+  }
+}
