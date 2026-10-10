@@ -2,6 +2,8 @@
 
 Dataset and collection artifacts for identifying which LLM generated a response. Includes Llama, Gemini, and Qwen responses, collection code, and provenance records.
 
+See [DATASET_CAVEATS.md](DATASET_CAVEATS.md) for the detailed audit findings, collection limitations, and data-loading pitfalls.
+
 ## Dataset snapshot
 
 | Model | File | Saved responses |
