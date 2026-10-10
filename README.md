@@ -1,6 +1,6 @@
 # 448 Project 1 — LLM Authorship Attribution
 
-Dataset and collection artifacts for identifying which LLM generated a response. Intended families: Llama, Gemini, and Qwen. CNN and LSTM training is being developed separately; no verified training results or final PDF report are included here.
+Dataset and collection artifacts for identifying which LLM generated a response. Includes Llama, Gemini, and Qwen responses, collection code, and provenance records.
 
 ## Dataset snapshot
 
@@ -34,12 +34,8 @@ Final Qwen records by endpoint: `http://127.0.0.1:11434`: 131, `http://127.0.0.1
 
 The Pollinations GPT-OSS dataset was removed at the owner's request following an audit that found provider advertisements, reasoning-only wrappers, and unresolved provenance/token-limit questions. It is not included.
 
-## Training artifact status
-
-`train_authorship_attribution.py` is the original legacy prototype, not the replacement pipeline built by another agent. Known issues: its default `files/` directory does not match this layout; input/output/both selection is absent; tokenization loses non-Latin letters; LSTM padding is not length-aware; CPU best-checkpoint tensors are not cloned. It should not be represented as a validated final pipeline.
-
-The intended evaluation groups all responses to a prompt into the same split: 400/50/50 prompt IDs for train/validation/test, with training-only vocabulary construction. The original implementation groups prompts but does not stratify categories. Required comparisons are CNN and LSTM on input-only, output-only, and input-plus-output.
-
 ## Scope and limitations
 
 A 512-token generation cap does not equalize actual output lengths. Some outputs finish early; others are truncated. Each family is represented by one model configuration and collection setup. Final conclusions should reflect that scope. Runtime logs, process IDs, caches, credentials, model weights, and the outdated handoff document are excluded.
+
+Dataset audit: all 1,500 records have matching prompts/categories and nonempty outputs, with no duplicate prompts or exact duplicate outputs after whitespace/case normalization. Qwen response 84 explicitly mentions “Qwen.” Gemini response 51 contains only two haiku lines; its stopping reason was not recorded. Of the 153 Qwen responses with saved finish metadata, 84 reached the generation limit. Raw responses are preserved unchanged.

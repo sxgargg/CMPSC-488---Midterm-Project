@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-10-10T00:01:32.614194+00:00",
+  "snapshot_utc": "2026-10-10T00:03:31.680117+00:00",
   "datasets": {
     "ollama_outputs_llama3.1_8b.json": {
       "records": 500,
@@ -27,7 +27,7 @@
     }
   },
   "sha256": {
-    "README.md": "e2f4ef7c187390de5fcc785fb43bd61675b2609687fd7e94c4f494bdb15a1efd",
+    "README.md": "0b409cf7f02646d89d964dab2b0b28dc39b3382d3f2b4e685437a0c87907d448",
     "collect_llm_outputs.py": "3844d758d91000a04e97536cce146bf6ea26d228241911a75e2301ea8a1537fc",
     "collect_ollama_remote.py": "f9318706b470c3f146b92f0bef766989d1d8142031b22ddb5edd0a608c3e3427",
     "collect_qwen_concurrent.py": "9291450f328ce231ac513deffcf19e72d378e7068b82489fb7fdd240b5c91216",
@@ -39,7 +39,6 @@
     "ollama_outputs_qwen2.5_7b.json": "6be520b1f393f507e0c5227e68ba941fa5f1c0f3d1aa9055a140f4355da40eb0",
     "qwen_collection_events.jsonl": "b4b62c1a1473ce832b1a4ad25942694d916fca67a57522e2bf0910f20835d20a",
     "qwen_pc_metrics.jsonl": "afbc5cdf4b886c8afef4c62dbbe2268a2ccdcf7e77be5183e68403d6281ded37",
-    "qwen_split_metrics.jsonl": "9a54f0152e0062d8f1b0fc75820cd88e84eebc54600a67d27969256b6f9270fc",
-    "train_authorship_attribution.py": "2e903a3364cbc96fa20d920e155b26806409d2183f8f0bd96fb971774b9b3794"
+    "qwen_split_metrics.jsonl": "9a54f0152e0062d8f1b0fc75820cd88e84eebc54600a67d27969256b6f9270fc"
   }
 }
