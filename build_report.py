@@ -156,6 +156,6 @@ def main():
         canvas.saveState();w,h=doc.pagesize;canvas.setStrokeColor(TEAL);canvas.setLineWidth(1);canvas.line(48,h-42,w-48,h-42);canvas.setFillColor(NAVY);canvas.setFont('Helvetica',8);canvas.drawString(48,h-33,'448 PROJECT 1  |  LLM AUTHORSHIP ATTRIBUTION');canvas.drawString(48,28,'Adithya Vemulapali / Shreya Garg / Ani Ganesan');canvas.drawRightString(w-48,28,str(doc.page));canvas.restoreState()
     doc=SimpleDocTemplate(str(out/'448_project_1_report.pdf'),pagesize=(612,792),leftMargin=56,rightMargin=56,topMargin=62,bottomMargin=48,title='448 Project 1: LLM Authorship Attribution',author=', '.join(team['members']))
     doc.build(story,onFirstPage=page,onLaterPages=page)
-    (out/'448_project_1_report.md').write_text('\n'.join(md)+'\n')
+    (out/'448_project_1_report.md').write_text('\n'.join(md).rstrip()+'\n')
     print(out/'448_project_1_report.pdf')
 if __name__=='__main__':main()

@@ -229,4 +229,3 @@ References
 [5] Project artifacts: DATASET_CAVEATS.md, EXPERIMENTS.md, DATASET_STATUS.json, and results/*/metrics.json. Primary evidence for dataset and reported experimental claims.
 
 Submission item still requiring a team decision: designate the team leader. No leader was selected by the assistant.
-

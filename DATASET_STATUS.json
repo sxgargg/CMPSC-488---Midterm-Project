@@ -44,13 +44,13 @@
     "EXPERIMENTS.md": "7a2c1626d44aba251701b6e96a0cfd50f31186fe1fb5fed712f3d0052ab81a98",
     "TEAM.json": "31b2d2e9cdb80c52fffe5df5d1deebea740e25b3dd89408d401842a6e16ffaa8",
     "analyze_results.py": "df6e9074bf3fbf270928c8335685ac6058398693d752d089263292c678cfbe64",
-    "build_report.py": "7fcbc2f49ecbb99684a617a4b6ab7449c43747c1a96a45787be5d76a6899982e",
+    "build_report.py": "f0dd0206d2ef6f31cacc6e5cd3ba982ad362f0bc07bb92cbcb1f58392d56f9ba",
     "checkpoints/cnn_output_s42.pt": "f6c3f2fa302c6d626fa9a618c88252a22c908cc01246d8236494c767b22f30f5",
     "checkpoints/lstm_output_s42.pt": "1832dceb4de0c792a43c8e6d7b8799ffdee075eeb25bd841e6ba97221ac8ae03",
     "figures/confusion_matrices.png": "fb1bc8d0c06f74023731e8cfec5dd62ef28bc3045f678e6888cd4d36ff9514ca",
     "figures/rq2_accuracy.png": "0fde7da8871f9f2d0e5c3d10e289ff260f5eeb7dbcab9409779669ba709baca4",
     "figures/style_features.png": "535a6f1ab96c7f48a9b9023e030e2f7ab7ea8b7bfaed674431606ed253d05161",
-    "output/pdf/448_project_1_report.md": "612dcfb46ed2ad9abd1f03181037e01344c31d7cc2d640cbfec6450de54c225a",
+    "output/pdf/448_project_1_report.md": "86b8f734a56ef0538745bed8391874dbfcc2d1271c764390d73b9b914d9fa7bd",
     "output/pdf/448_project_1_report.pdf": "4d84bedd5dcc7d5c017447e51304e792c03d670ab06ebfd27d420753a49d5f02",
     "predict.py": "453a1657117e63806ac8fadf123a5744d7f0fe3a50022c63f6e770c6b5fe144c",
     "requirements-lock.txt": "72664600dac44a593ce563278db1336ec17bbb2f5001028b1b1d317b4fd765e7",
@@ -136,7 +136,8 @@
     "run_experiments.py": "f803d165daeacb67712f7965675011b45c96ec2d73b448abfccc1e6f8151e86f",
     "tests/test_pipeline.py": "0c1972ebb8752e18e1596eadc2e4d52d96d41ab05ffc8280a3d76e96c0f1a662",
     "train_authorship_attribution.py": "12f74a16aa2d135c1f30a68a408d5b212ae1192d243e657f5602d9565854d304",
-    "verify_results.py": "1c0ac4dcb0e68b2b9a5bf6c01e2ffddb7def11f9768058a912662e0467b20694"
+    "verify_results.py": "1c0ac4dcb0e68b2b9a5bf6c01e2ffddb7def11f9768058a912662e0467b20694",
+    ".gitattributes": "f71470e690718dfe296c22a8c08f86dd2f0687a5597590ee9d28cef5ca3cc3e4"
   },
   "project_updated_utc": "2026-10-11T21:01:47.780599+00:00"
 }
