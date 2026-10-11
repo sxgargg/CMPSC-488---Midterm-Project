@@ -1,0 +1,180 @@
+{
+  "config": {
+    "model": "lstm",
+    "text_source": "output",
+    "transform": "masked",
+    "domain": false,
+    "seed": 123,
+    "epochs": 15,
+    "patience": 4,
+    "lr": 0.001,
+    "batch_size": 32,
+    "max_output": 256,
+    "max_input": 64,
+    "device": "mps",
+    "threads": 4,
+    "out": "/Users/adithyavemulapalli/Documents/New project/448-project-1/results/lstm_output_s123",
+    "overwrite": false
+  },
+  "families": [
+    "gemini",
+    "llama",
+    "qwen"
+  ],
+  "vocab_size": 9486,
+  "parameters": 1346691,
+  "best_epoch": 4,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0845645634333292,
+      "val_loss": 1.1062919871012369,
+      "val_accuracy": 0.36666666666666664,
+      "seconds": 1.2277432499686256
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.0194499842325846,
+      "val_loss": 1.0714651616414388,
+      "val_accuracy": 0.44,
+      "seconds": 1.1442991249496117
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.8972266014417013,
+      "val_loss": 0.9530360921223958,
+      "val_accuracy": 0.49333333333333335,
+      "seconds": 0.9947066659806296
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.804035382270813,
+      "val_loss": 0.9258814748128256,
+      "val_accuracy": 0.5466666666666666,
+      "seconds": 1.072773416992277
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6645432353019715,
+      "val_loss": 1.0206062189737957,
+      "val_accuracy": 0.5533333333333333,
+      "seconds": 1.0413375839125365
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5428692722320556,
+      "val_loss": 0.9422032229105631,
+      "val_accuracy": 0.54,
+      "seconds": 1.0232408749870956
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.3903917467594147,
+      "val_loss": 0.9328160730997721,
+      "val_accuracy": 0.6066666666666667,
+      "seconds": 0.9773135420400649
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.27569399793942767,
+      "val_loss": 1.0412784830729167,
+      "val_accuracy": 0.5933333333333334,
+      "seconds": 1.0390824580099434
+    }
+  ],
+  "training_seconds": 8.535121875000186,
+  "preprocessing": {
+    "train": {
+      "output_exceeds_limit": 909,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.022460326785247287,
+      "n": 1200
+    },
+    "val": {
+      "output_exceeds_limit": 120,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.06270944429874406,
+      "n": 150
+    },
+    "test": {
+      "output_exceeds_limit": 118,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.06292531781194799,
+      "n": 150
+    }
+  },
+  "environment": {
+    "python": "3.13.3",
+    "torch": "2.14.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "data_sha256": {
+    "ollama_outputs_llama3.1_8b.json": "a4473e15d33220f4dc3398925681c9a5d8e2deb16fecdb8e279c97a3e12dedd1",
+    "gemini_outputs_gemini_3.8_flash.jsonl": "821d7abdd5911639e287c159c43a7332b1ba557695dfd06c0e1ab74db905b98e",
+    "ollama_outputs_qwen2.5_7b.json": "6be520b1f393f507e0c5227e68ba941fa5f1c0f3d1aa9055a140f4355da40eb0"
+  },
+  "val": {
+    "accuracy": 0.5466666666666666,
+    "macro_f1": 0.5309329951717893,
+    "per_family_accuracy": {
+      "gemini": 0.8,
+      "llama": 0.32,
+      "qwen": 0.52
+    },
+    "confusion_matrix": [
+      [
+        40,
+        2,
+        8
+      ],
+      [
+        11,
+        16,
+        23
+      ],
+      [
+        13,
+        11,
+        26
+      ]
+    ],
+    "n": 150,
+    "loss": 0.9258814748128256,
+    "accuracy_prompt_bootstrap_95ci": [
+      0.46,
+      0.6333333333333333
+    ]
+  },
+  "test": {
+    "accuracy": 0.5266666666666666,
+    "macro_f1": 0.5094878433571354,
+    "per_family_accuracy": {
+      "gemini": 0.78,
+      "llama": 0.3,
+      "qwen": 0.5
+    },
+    "confusion_matrix": [
+      [
+        39,
+        2,
+        9
+      ],
+      [
+        17,
+        15,
+        18
+      ],
+      [
+        10,
+        15,
+        25
+      ]
+    ],
+    "n": 150,
+    "loss": 0.9233470153808594,
+    "accuracy_prompt_bootstrap_95ci": [
+      0.4533333333333333,
+      0.6
+    ]
+  }
+}

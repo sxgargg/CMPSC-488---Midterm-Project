@@ -1,0 +1,752 @@
+[
+  {
+    "prompt_id": 6,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 6,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 6,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 14,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 14,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 14,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 21,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 21,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 21,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 36,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 36,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 36,
+    "true": "qwen",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 50,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 50,
+    "true": "llama",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 50,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 67,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 67,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 67,
+    "true": "qwen",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 69,
+    "true": "gemini",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 69,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 69,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 73,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 73,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 73,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 79,
+    "true": "gemini",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 79,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 79,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 83,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 83,
+    "true": "llama",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 83,
+    "true": "qwen",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 103,
+    "true": "gemini",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 103,
+    "true": "llama",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 103,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 119,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 119,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 119,
+    "true": "qwen",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 122,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 122,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 122,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 134,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 134,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 134,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 142,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 142,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 142,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 171,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 171,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 171,
+    "true": "qwen",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 173,
+    "true": "gemini",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 173,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 173,
+    "true": "qwen",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 175,
+    "true": "gemini",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 175,
+    "true": "llama",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 175,
+    "true": "qwen",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 187,
+    "true": "gemini",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 187,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 187,
+    "true": "qwen",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 195,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 195,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 195,
+    "true": "qwen",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 207,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 207,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 207,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 208,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 208,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 208,
+    "true": "qwen",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 230,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 230,
+    "true": "llama",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 230,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 234,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 234,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 234,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 243,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 243,
+    "true": "llama",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 243,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 262,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 262,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 262,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 264,
+    "true": "gemini",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 264,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 264,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 268,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 268,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 268,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 285,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 285,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 285,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 287,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 287,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 287,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 307,
+    "true": "gemini",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 307,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 307,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 316,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 316,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 316,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 323,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 323,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 323,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 330,
+    "true": "gemini",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 330,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 330,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 344,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 344,
+    "true": "llama",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 344,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 347,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 347,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 347,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 351,
+    "true": "gemini",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 351,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 351,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 356,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 356,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 356,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 364,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 364,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 364,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 384,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 384,
+    "true": "llama",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 384,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 392,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 392,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 392,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 401,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 401,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 401,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 425,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 425,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 425,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 444,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 444,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 444,
+    "true": "qwen",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 448,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 448,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 448,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 458,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 458,
+    "true": "llama",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 458,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 459,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 459,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 459,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 487,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 487,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 487,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 489,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 489,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 489,
+    "true": "qwen",
+    "predicted": "qwen"
+  },
+  {
+    "prompt_id": 495,
+    "true": "gemini",
+    "predicted": "gemini"
+  },
+  {
+    "prompt_id": 495,
+    "true": "llama",
+    "predicted": "llama"
+  },
+  {
+    "prompt_id": 495,
+    "true": "qwen",
+    "predicted": "qwen"
+  }
+]

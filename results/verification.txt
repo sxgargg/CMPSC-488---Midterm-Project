@@ -1,0 +1,15 @@
+Verified cnn_input_s42
+Verified cnn_output_s42
+Verified cnn_both_s42
+Verified cnn_output_s7
+Verified cnn_output_s123
+Verified cnn_plain_s42
+Verified cnn_domain_s42
+Verified lstm_input_s42
+Verified lstm_output_s42
+Verified lstm_both_s42
+Verified lstm_output_s7
+Verified lstm_output_s123
+Verified lstm_plain_s42
+Verified lstm_domain_s42
+PASS: all 14 runs, data hashes, train-only vocabularies, splits, checkpoint selection, and reported metrics.

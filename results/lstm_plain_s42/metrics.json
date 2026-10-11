@@ -1,0 +1,187 @@
+{
+  "config": {
+    "model": "lstm",
+    "text_source": "output",
+    "transform": "plain",
+    "domain": false,
+    "seed": 42,
+    "epochs": 15,
+    "patience": 4,
+    "lr": 0.001,
+    "batch_size": 32,
+    "max_output": 256,
+    "max_input": 64,
+    "device": "mps",
+    "threads": 4,
+    "out": "/Users/adithyavemulapalli/Documents/New project/448-project-1/results/lstm_plain_s42",
+    "overwrite": false
+  },
+  "families": [
+    "gemini",
+    "llama",
+    "qwen"
+  ],
+  "vocab_size": 11064,
+  "parameters": 1548675,
+  "best_epoch": 5,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0990021896362305,
+      "val_loss": 1.0925156911214193,
+      "val_accuracy": 0.38,
+      "seconds": 1.3161622500047088
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.0299427644411723,
+      "val_loss": 1.0864870198567709,
+      "val_accuracy": 0.4,
+      "seconds": 1.0392643749946728
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.918563985824585,
+      "val_loss": 1.1143297322591146,
+      "val_accuracy": 0.38666666666666666,
+      "seconds": 1.056731167016551
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7675547329584758,
+      "val_loss": 1.1057115427652995,
+      "val_accuracy": 0.43333333333333335,
+      "seconds": 1.0699835841078311
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6042041329542795,
+      "val_loss": 1.0703209559122722,
+      "val_accuracy": 0.46,
+      "seconds": 1.0391622920287773
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.47296872138977053,
+      "val_loss": 1.1352680206298829,
+      "val_accuracy": 0.4866666666666667,
+      "seconds": 1.0434432090260088
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.30993315219879153,
+      "val_loss": 1.4258793640136718,
+      "val_accuracy": 0.5066666666666667,
+      "seconds": 1.0593997089890763
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.18691548148790996,
+      "val_loss": 1.4719801839192708,
+      "val_accuracy": 0.49333333333333335,
+      "seconds": 1.0565292909741402
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.11663358499606451,
+      "val_loss": 1.7208284759521484,
+      "val_accuracy": 0.4866666666666667,
+      "seconds": 1.03525533399079
+    }
+  ],
+  "training_seconds": 9.726726709050126,
+  "preprocessing": {
+    "train": {
+      "output_exceeds_limit": 804,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.02457472977412402,
+      "n": 1200
+    },
+    "val": {
+      "output_exceeds_limit": 106,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.07970970299445021,
+      "n": 150
+    },
+    "test": {
+      "output_exceeds_limit": 111,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.07717619816580848,
+      "n": 150
+    }
+  },
+  "environment": {
+    "python": "3.13.3",
+    "torch": "2.14.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "data_sha256": {
+    "ollama_outputs_llama3.1_8b.json": "a4473e15d33220f4dc3398925681c9a5d8e2deb16fecdb8e279c97a3e12dedd1",
+    "gemini_outputs_gemini_3.8_flash.jsonl": "821d7abdd5911639e287c159c43a7332b1ba557695dfd06c0e1ab74db905b98e",
+    "ollama_outputs_qwen2.5_7b.json": "6be520b1f393f507e0c5227e68ba941fa5f1c0f3d1aa9055a140f4355da40eb0"
+  },
+  "val": {
+    "accuracy": 0.46,
+    "macro_f1": 0.4160068455314494,
+    "per_family_accuracy": {
+      "gemini": 0.76,
+      "llama": 0.1,
+      "qwen": 0.52
+    },
+    "confusion_matrix": [
+      [
+        38,
+        8,
+        4
+      ],
+      [
+        16,
+        5,
+        29
+      ],
+      [
+        17,
+        7,
+        26
+      ]
+    ],
+    "n": 150,
+    "loss": 1.0703209559122722,
+    "accuracy_prompt_bootstrap_95ci": [
+      0.3933333333333333,
+      0.5266666666666666
+    ]
+  },
+  "test": {
+    "accuracy": 0.4533333333333333,
+    "macro_f1": 0.40952961931928833,
+    "per_family_accuracy": {
+      "gemini": 0.8,
+      "llama": 0.1,
+      "qwen": 0.46
+    },
+    "confusion_matrix": [
+      [
+        40,
+        5,
+        5
+      ],
+      [
+        17,
+        5,
+        28
+      ],
+      [
+        15,
+        12,
+        23
+      ]
+    ],
+    "n": 150,
+    "loss": 1.0684395345052082,
+    "accuracy_prompt_bootstrap_95ci": [
+      0.3933333333333333,
+      0.5133333333333333
+    ]
+  }
+}

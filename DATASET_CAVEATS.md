@@ -1,6 +1,6 @@
 # Dataset caveats and audit handoff
 
-Audit date: October 9, 2026 (America/New_York). This file records findings about the collected data; no training pipeline or trained results are included.
+Audit date: October 9, 2026 (America/New_York). This file records the collection audit. A new pipeline and completed experiments were added on October 11, 2026; see EXPERIMENTS.md and the project report.
 
 ## What was verified
 
@@ -38,6 +38,6 @@ Audit date: October 9, 2026 (America/New_York). This file records findings about
 - Prompts are identical and equally represented for all three labels. For a deterministic input-only classifier evaluated on complete prompt triplets, accuracy is exactly 1/3: it makes the same prediction on three identical inputs with different labels. A clear deviation calls for checking data balance, evaluation stochasticity, and leakage. Adding prompts to outputs can still affect classification through task context; improvement is not ruled out by the input-only result.
 - Grouping by prompt does not itself stratify categories. The removed legacy implementation's seed-42 split omitted math from validation and code_debugging from test. The replacement pipeline needs its own split audit.
 - Non-Latin text and formatting are present. The removed prototype's ASCII-oriented tokenizer discarded non-Latin letters. Its 128-token limit truncated 1,276/1,500 responses under that tokenizer; this is a preprocessing statistic, not the model generation limit.
-- The legacy training script was removed at the owner's request. The replacement pipeline has not been inspected here. No training performance or model validation is claimed.
+- The legacy training prototype was removed and has now been replaced by the tested pipeline in this repository. It loads all three files explicitly, preserves Unicode letters, groups and stratifies prompt splits, and handles padding. New experiment results are documented separately; historical prototype statistics above are not claims about the replacement pipeline.
 
 Raw dataset records were not modified to remove these issues. Any filtering, masking, or ablation belongs in a documented derived preprocessing step, retaining the original artifacts and reporting its effect.

@@ -1,8 +1,56 @@
-# 448 Project 1 — LLM Authorship Attribution
+# 448 Project 1 - LLM Authorship Attribution
 
-Dataset and collection artifacts for identifying which LLM generated a response. Includes Llama, Gemini, and Qwen responses, collection code, and provenance records.
+CNN and LSTM classification of Llama, Gemini, and Qwen responses. Includes the raw dataset, collection provenance, a tested training pipeline, 14 completed neural experiments, diagnostic baselines, trained output-only checkpoints, and the project report.
 
-See [DATASET_CAVEATS.md](DATASET_CAVEATS.md) for the detailed audit findings, collection limitations, and data-loading pitfalls.
+**Team:** Adithya Vemulapali, Shreya Garg, Ani Ganesan. **Team leader:** not yet designated, at the team's request.
+
+- [Project report (PDF)](output/pdf/448_project_1_report.pdf)
+- [Results table](results/summary.csv)
+- [Experiment protocol](EXPERIMENTS.md)
+- [Dataset caveats](DATASET_CAVEATS.md)
+
+## Main test results
+
+Fixed 400/50/50 prompt split; all three families stay with each prompt. Test set: 150 responses. Primary seed: 42. Model names are masked in preprocessing; raw text is unchanged.
+
+| Model | Input only | Output only | Input + output |
+|---|---:|---:|---:|
+| CNN | 33.3% | 86.0% | 90.0% |
+| LSTM | 33.3% | 60.7% | 68.0% |
+
+Output-only macro-F1: CNN 0.859; LSTM 0.601. Additional seeds, per-family recall, confusion matrices, prompt-bootstrap intervals, and paired comparisons appear in the report and saved metrics. Held-out writing accuracy is 64.3% for CNN and 50.3% for LSTM. Removing formatting reduces both models' performance. These are results for this dataset and these configurations, not universal authorship guarantees.
+
+## Reproduce
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python run_experiments.py --device auto
+python analyze_results.py
+python verify_results.py
+python build_report.py
+```
+
+The suite skips completed matching runs in `results/`. To retrain a single experiment without replacing the published evidence:
+
+```bash
+python train_authorship_attribution.py --model cnn --text-source output --out results/my_cnn_run
+python train_authorship_attribution.py --model lstm --text-source both --out results/my_lstm_run
+```
+
+For a complete fresh suite, use a separate checkout with an empty `results/` directory; do not mix custom experiments into the published report's 14-run grid. `--device auto` prefers CUDA, then MPS, then CPU. Install a CUDA-enabled PyTorch build separately when using an NVIDIA PC. `requirements-lock.txt` records the actual Mac package versions, while `requirements.txt` is the portable dependency list.
+
+Use a published checkpoint on your own response text:
+
+```bash
+python predict.py --checkpoint checkpoints/cnn_output_s42.pt --output-file response.txt
+```
+
+Predicted probabilities are uncalibrated; the model always chooses among these three families and cannot detect unknown models or human authors. The two versioned checkpoints are the primary output-only models, not retrospectively selected best seeds. Other experiment checkpoints remain under the Git-ignored `models/` directory after training.
+
+`results/<run>/` contains metrics, training history, validation/test predictions, prompt splits, and train-only vocabulary. Domain runs add target predictions. `results/analysis.json` holds diagnostic baselines and paired comparisons. `results/verification.txt` records successful evidence checks. Figures and the PDF/Markdown report are generated from these artifacts. Training code is independent of collection code.
 
 ## Dataset snapshot
 

@@ -1,0 +1,194 @@
+{
+  "config": {
+    "model": "lstm",
+    "text_source": "output",
+    "transform": "masked",
+    "domain": false,
+    "seed": 42,
+    "epochs": 15,
+    "patience": 4,
+    "lr": 0.001,
+    "batch_size": 32,
+    "max_output": 256,
+    "max_input": 64,
+    "device": "mps",
+    "threads": 4,
+    "out": "/Users/adithyavemulapalli/Documents/New project/448-project-1/results/lstm_output_s42",
+    "overwrite": false
+  },
+  "families": [
+    "gemini",
+    "llama",
+    "qwen"
+  ],
+  "vocab_size": 9486,
+  "parameters": 1346691,
+  "best_epoch": 6,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.093689079284668,
+      "val_loss": 1.1086747487386068,
+      "val_accuracy": 0.35333333333333333,
+      "seconds": 1.3573612079489976
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.0241857926050821,
+      "val_loss": 1.0522133127848308,
+      "val_accuracy": 0.46,
+      "seconds": 1.1821538329822943
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.8694457721710205,
+      "val_loss": 0.9890226109822591,
+      "val_accuracy": 0.48,
+      "seconds": 0.9436202499782667
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7525927448272705,
+      "val_loss": 0.9258730061848959,
+      "val_accuracy": 0.5466666666666666,
+      "seconds": 0.9435556250391528
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6346521790822347,
+      "val_loss": 0.9802544784545898,
+      "val_accuracy": 0.5066666666666667,
+      "seconds": 0.9445467499317601
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5232118240992228,
+      "val_loss": 0.9170358085632324,
+      "val_accuracy": 0.5866666666666667,
+      "seconds": 0.9412145839305595
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.38924830118815107,
+      "val_loss": 1.084022102355957,
+      "val_accuracy": 0.56,
+      "seconds": 0.9430907079949975
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.2910396079222361,
+      "val_loss": 1.0386910502115885,
+      "val_accuracy": 0.6133333333333333,
+      "seconds": 0.9556448749499395
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.22617333928744,
+      "val_loss": 1.3632316080729168,
+      "val_accuracy": 0.6066666666666667,
+      "seconds": 0.9589957090793177
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.14402851377924283,
+      "val_loss": 1.322199961344401,
+      "val_accuracy": 0.6333333333333333,
+      "seconds": 0.9884778750129044
+    }
+  ],
+  "training_seconds": 10.176798708969727,
+  "preprocessing": {
+    "train": {
+      "output_exceeds_limit": 909,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.022460326785247287,
+      "n": 1200
+    },
+    "val": {
+      "output_exceeds_limit": 120,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.06270944429874406,
+      "n": 150
+    },
+    "test": {
+      "output_exceeds_limit": 118,
+      "input_exceeds_limit": 0,
+      "unknown_token_fraction": 0.06292531781194799,
+      "n": 150
+    }
+  },
+  "environment": {
+    "python": "3.13.3",
+    "torch": "2.14.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "data_sha256": {
+    "ollama_outputs_llama3.1_8b.json": "a4473e15d33220f4dc3398925681c9a5d8e2deb16fecdb8e279c97a3e12dedd1",
+    "gemini_outputs_gemini_3.8_flash.jsonl": "821d7abdd5911639e287c159c43a7332b1ba557695dfd06c0e1ab74db905b98e",
+    "ollama_outputs_qwen2.5_7b.json": "6be520b1f393f507e0c5227e68ba941fa5f1c0f3d1aa9055a140f4355da40eb0"
+  },
+  "val": {
+    "accuracy": 0.5866666666666667,
+    "macro_f1": 0.5889091007087611,
+    "per_family_accuracy": {
+      "gemini": 0.72,
+      "llama": 0.44,
+      "qwen": 0.6
+    },
+    "confusion_matrix": [
+      [
+        36,
+        5,
+        9
+      ],
+      [
+        5,
+        22,
+        23
+      ],
+      [
+        4,
+        16,
+        30
+      ]
+    ],
+    "n": 150,
+    "loss": 0.9170358085632324,
+    "accuracy_prompt_bootstrap_95ci": [
+      0.5131666666666665,
+      0.66
+    ]
+  },
+  "test": {
+    "accuracy": 0.6066666666666667,
+    "macro_f1": 0.6011330862816012,
+    "per_family_accuracy": {
+      "gemini": 0.78,
+      "llama": 0.4,
+      "qwen": 0.64
+    },
+    "confusion_matrix": [
+      [
+        39,
+        3,
+        8
+      ],
+      [
+        9,
+        20,
+        21
+      ],
+      [
+        3,
+        15,
+        32
+      ]
+    ],
+    "n": 150,
+    "loss": 0.8584884834289551,
+    "accuracy_prompt_bootstrap_95ci": [
+      0.5266666666666666,
+      0.6866666666666668
+    ]
+  }
+}
