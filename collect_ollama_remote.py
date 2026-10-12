@@ -1,53 +1,21 @@
 #!/usr/bin/env python3
 """
-collect_ollama_remote.py — collect (model, prompt, output) triples from a
-REMOTE Ollama server (e.g. a GPU box on your tailnet) or from the
-Google Gemini API (AI Studio key).
+Collect (model, prompt, output) records from an Ollama server (local or
+on another machine) or from the Gemini API. We used this script for
+Llama and Qwen. Standard library only.
 
-Stdlib only: needs nothing but python3. No pip installs.
-
-SETUP (Ollama)
-  1. Put this file and llm_classification_prompts_500.json in one folder
-     on any machine that can reach the Ollama server (your Mac works).
-  2. Run the commands below in Terminal from that folder.
-
-SETUP (Gemini)
-  1. Same folder as above (prompts file + this script).
-  2. Export your AI Studio key (never paste it into the script):
-       export GEMINI_API_KEY="<your key>"
-
-USAGE
-  # 1. see which models are available
+Usage:
   python3 collect_ollama_remote.py --list-models
-  python3 collect_ollama_remote.py --provider gemini --list-models
-
-  # 2. smoke test: 5 prompts on one model
   python3 collect_ollama_remote.py --models llama3.1:8b --limit 5
-  python3 collect_ollama_remote.py --provider gemini --models gemini-3.6-flash --limit 5
-
-  # 3. full run — every prompt is retried forever (with backoff) until it
-  #    succeeds, so an overloaded API or dropped connection can't kill the
-  #    run. Safe to Ctrl-C and re-run; finished prompts are skipped
-  #    automatically. Only non-retryable errors (bad key, unknown model,
-  #    refused prompt) stop the run.
   python3 collect_ollama_remote.py --models llama3.1:8b qwen2.5:7b
-  python3 collect_ollama_remote.py --provider gemini --models gemini-3.6-flash
 
-  # 4. load into pandas
-  python3 -c "import pandas as pd; df = pd.read_json('ollama_outputs_llama3.1_8b.json'); print(df.shape)"
-
-OUTPUT
-  One JSON file per model, e.g. ollama_outputs_llama3.1_8b.json or
-  gemini_outputs_gemini-3.6_flash.json — a JSON array with one object
-  per row:
-    model_family, model_name, prompt_id, prompt_category,
-    prompt, output, temperature, max_tokens, timestamp_utc
-    plus ollama_host (ollama) or provider/endpoint (gemini)
-  model_family is auto-derived from the model name (llama3.1:8b -> llama,
-  gemini-3.6-flash -> gemini) and is the label your classifier predicts.
-
-  Keep temperature and max_tokens IDENTICAL across every provider/model
-  so the classifier learns model-family traits, not setting differences.
+Requests are retried with backoff, and finished prompts are skipped on
+re-run. Output is one JSON array per model, e.g.
+ollama_outputs_llama3.1_8b.json, with the fields
+  model_family, model_name, prompt_id, prompt_category,
+  prompt, output, temperature, max_tokens, timestamp_utc, ollama_host
+model_family is derived from the model name (llama3.1:8b -> llama).
+Temperature and max_tokens are kept identical across all models.
 """
 
 import argparse
