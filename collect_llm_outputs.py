@@ -1,48 +1,25 @@
 #!/usr/bin/env python3
 """
-collect_llm_outputs.py — build a (LLM_name, LLM_input, LLM_output) dataset
-for the LLM-authorship-attribution project.
+Collect (model, prompt, output) records for every prompt in
+llm_classification_prompts_500.json. We used this script for Gemini.
 
-WHAT IT DOES
-  Sends every prompt in llm_classification_prompts_500.json to each model you
-  list, and appends one JSON object per (model, prompt) to an output .jsonl file:
-      model_family, model_name, prompt_id, prompt_category,
-      prompt, output, temperature, max_tokens, timestamp_utc
+Each response is appended to a .jsonl file with the fields
+  model_family, model_name, prompt_id, prompt_category,
+  prompt, output, temperature, max_tokens, timestamp_utc
+The file is saved after every response, so an interrupted run can be
+restarted with the same command and finished prompts are skipped.
 
-  It checkpoints after EVERY response, so you can Ctrl-C at any time and just
-  re-run the same command — finished (model, prompt) pairs are skipped.
+Setup:
+  pip install google-genai openai requests
+  export GEMINI_API_KEY="..."    # read from the environment, never stored
 
-IMPORTANT: subscriptions are not API access
-  - A ChatGPT subscription does NOT include API access, and scripting the
-    ChatGPT website violates OpenAI's terms. Use an OpenAI *API* key instead
-    (separate pay-as-you-go billing at platform.openai.com).
-  - A Gemini app subscription does NOT include API quota either. Get a free
-    API key at Google AI Studio (aistudio.google.com); the free tier is
-    generous for Flash-class models. Paid API usage is billed separately.
-  - Open-source models (Llama, Qwen, DeepSeek, Mistral, ...) run FREE locally
-    via Ollama: https://ollama.com  then e.g. `ollama pull llama3.1:8b`
+Example:
+  python collect_llm_outputs.py --models gemini-3.8-flash --limit 5
+  python collect_llm_outputs.py --models gemini-3.8-flash \
+      --out gemini_outputs_gemini_3.8_flash.jsonl
 
-SETUP
-  pip install openai google-genai requests
-  export GEMINI_API_KEY="..."   # from Google AI Studio
-  export OPENAI_API_KEY="..."   # from platform.openai.com (the API, not ChatGPT)
-
-EXAMPLES
-  # quick smoke test: 5 prompts, one model
-  python collect_llm_outputs.py --models gemini-3.5-flash --limit 5
-
-  # full run: 2 API models + 2 local models (rerun any time to resume)
-  python collect_llm_outputs.py --models gemini-3.5-flash gpt-5.5 llama3.1:8b qwen2.5:7b
-
-  # convert the result to CSV for pandas
-  python -c "import pandas as pd; pd.read_json('llm_outputs.jsonl', lines=True).to_csv('llm_outputs.csv', index=False)"
-
-METHODOLOGY NOTES (for your project report — document these!)
-  - Every model sees the EXACT same 500 prompts in the same order.
-  - temperature and max_tokens are fixed across all models and recorded per row,
-    so the classifier learns model "fingerprints", not your sampling settings.
-  - model_family is the label your CNN/RNN will predict (gpt, gemini, llama, ...).
-    Keep >= 3 families and keep counts balanced.
+Temperature (0.7) and max_tokens (512) are the same for every model and
+are recorded on every row.
 """
 
 import argparse
