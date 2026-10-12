@@ -5,7 +5,7 @@ CMPSC 448 Midterm Project. We train a CNN and an LSTM to predict which LLM famil
 **Team leader:** Adithya Vemulapali
 **Team members:** Adithya Vemulapali, Shreya Garg, Ani Ganesan
 
-Project report: *(add report PDF link here)*
+Project report: [report.pdf](report.pdf)
 
 ## Dataset
 
